@@ -26,14 +26,13 @@ class Dog extends Animal {
 }
 
 function runTask2() {
-    alert("Увага: JavaScript не підтримує повну абстракцію на рівні мови. Але ми використали інкапсуляцію, наслідування та поліморфізм!");
     
-    let dogName = prompt("Введіть ім'я вашого собаки:", "Рекс");
-    let dogBreed = prompt("Введіть породу собаки:", "Вівчарка");
+    let dogName = prompt("Введіть ім'я вашого собаки:");
+    let dogBreed = prompt("Введіть породу собаки:");
     
     let myDog = new Dog(dogName, dogBreed);
     
     myDog.makeSound(); 
     
-    alert(`Створено собаку: ${myDog.name}, порода: ${myDog.breed}. \nЗвук виведено в консоль (F12)!`);
+    alert(`Створено собаку: ${myDog.name}, порода: ${myDog.breed}. \nЗвук виведено в консоль (F12 aбо Fn +F12)!`);
 }
