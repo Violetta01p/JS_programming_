@@ -37,3 +37,4 @@ function buildResume() {
 
     myResume.display();
 }
+ 

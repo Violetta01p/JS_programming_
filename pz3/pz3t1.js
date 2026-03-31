@@ -24,20 +24,37 @@ class Admin extends User {
 }
 
 function runTask1() {
-    let name = prompt("Введіть ім'я користувача:");
+    let type = prompt("Введіть тип користувача (user/admin):").toLowerCase();
+
+    let name = prompt("Введіть ім'я:");
+    
     let ageInput = prompt("Введіть вік:");
     let age = Number(ageInput);
-    
+
     if (isNaN(age) || age <= 0) {
-        alert("Помилка: вік має бути числом більшим за 0!");
-        return; 
+        alert("Помилка: вік має бути числом більше 0!");
+        return;
     }
-    
+
     let profession = prompt("Введіть професію:");
-    let role = prompt("Введіть роль адміністратора:");
-    
-    let admin = new Admin(name, age, profession, role);
-    
-    admin.display();
-    alert(`Дані успішно збережено! \nАдміністратор: ${admin.name} \nРоль: ${admin.role} \nВідкрий консоль (F12 або Fn + F12) , щоб побачити деталі.`);
+
+    let obj;
+
+    if (type === "admin") {
+        let role = prompt("Введіть роль адміністратора:");
+        obj = new Admin(name, age, profession, role);
+    } else {
+        obj = new User(name, age, profession);
+    }
+
+    obj.display();
+
+    alert(
+        `Дані збережено!\n` +
+        `Ім'я: ${obj.name}\n` +
+        `Вік: ${obj.age}\n` +
+        `Професія: ${obj.profession}` +
+        (type === "admin" ? `\nРоль: ${obj.role}` : "") +
+        `\nДивись консоль (F12 + Fn)`
+    );
 }
