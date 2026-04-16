@@ -20,7 +20,8 @@ addTaskButton.addEventListener("click", function() {
 
 taskList.addEventListener("click", function(event) {
     if (event.target.nodeName === "LI") {
+              console.log("Завдання ",event.target , " видалено!");
         event.target.remove();
-        console.log("Завдання видалено!");
+        console.log("Завдання  видалено!");
     }
 });

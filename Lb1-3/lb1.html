@@ -2,25 +2,20 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Конструктор резюме</title>
+    <link rel="stylesheet" href="lb1.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Конструктор резюме</h1>
+        <p>Натисніть кнопку нижче, щоб ввести свої дані у спливаючих вікнах.</p>
+        
+        <button id="startBtn">Почати введення даних</button>
 
-    <h2>Введіть ваші дані</h2>
-    
-    <label>Ім'я:</label>
-    <input type="text" id="nameInput">
-    <br><br>
-
-    <label>Email:</label>
-    <input type="email" id="emailInput">
-    <br><br>
-
-    <button onclick="buildResume()">Створити резюме</button>
-
-    <hr>
-
-    <div id="resumeOutput"></div>
+        <div id="resumeOutput" class="resume-panel">
+            </div>
+    </div>
 
     <script src="lb1.js"></script>
 </body>
