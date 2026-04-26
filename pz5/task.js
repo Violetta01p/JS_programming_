@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("JS підключено");
-
 const output = document.getElementById("output");
 const btnUsers = document.getElementById("loadUsers");
 const btnPokemon = document.getElementById("loadPokemon");
