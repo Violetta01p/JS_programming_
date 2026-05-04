@@ -48,16 +48,22 @@ async function loadPokemon() {
 
     const data = await response.json();
 
-    const result = {
-      name: data.name,
-      id: data.id,
-      height: data.height,
-      weight: data.weight,
-      types: data.types.map(t => t.type.name)
-    };
+    output.innerHTML = `
+    <div style="display: flex; justify-content: center; gap: 15px; background: #f4f4f4; padding: 10px;">
+      <h2>${data.name.toUpperCase()}</h2>
+      <img src="${data.sprites.front_default}" alt="${data.name}" style="width: 250px;">
+    
+      <p><b>ID:</b> ${data.id}</p>
+      <p><b>Зріст:</b> ${data.height}</p>
+      <p><b>Вага:</b> ${data.weight}</p>
+      <p><b>Тип:</b> ${data.types.map(t => t.type.name).join(", ")}</p>
 
-    output.textContent = JSON.stringify(result, null, 2);
 
+      <p><b>HP:</b> ${data.stats[0].base_stat}</p>
+      <p><b>Attack:</b> ${data.stats[1].base_stat}</p>
+      <p><b>Defense:</b> ${data.stats[2].base_stat}</p>
+      <p><b>Speed:</b> ${data.stats[5].base_stat}</p>
+    `;
   } catch (error) {
     output.textContent = "Помилка: " + error.message;
   }
