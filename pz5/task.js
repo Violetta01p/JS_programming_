@@ -62,6 +62,7 @@ async function loadPokemon() {
       <p><b>HP:</b> ${data.stats[0].base_stat}</p>
       <p><b>Attack:</b> ${data.stats[1].base_stat}</p>
       <p><b>Defense:</b> ${data.stats[2].base_stat}</p>
+       <p><b>Special Attack:</b> ${data.stats[3].base_stat}</p>
       <p><b>Speed:</b> ${data.stats[5].base_stat}</p>
     `;
   } catch (error) {
