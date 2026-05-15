@@ -27,6 +27,7 @@ testFetch();
 
 const input = document.getElementById("taskInput");
 const list = document.getElementById("taskList");
+const button = document.getElementById("addTask");
 
 function renderTasks() {
     list.innerHTML = ""; 
@@ -60,6 +61,19 @@ list.addEventListener("click", (event) => {
         localStorage.setItem("tasks", JSON.stringify(tasks)); 
         renderTasks(); 
     }
+});
+document.getElementById("addTask").addEventListener("mouseover", () => {
+      console.log( button);
+     let text = button;
+  
+    if (text === "") return; 
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks.push(text); 
+    localStorage.setItem("tasks", JSON.stringify(tasks)); 
+
+    input.value = ""; 
+    renderTasks();    
 });
 
 renderTasks();
