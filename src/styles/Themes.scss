@@ -1,0 +1,15 @@
+.app-container {
+  padding: 20px;
+  min-height: 100vh;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+
+  &.skin-default { background: #f9f9f9; color: #333; }
+  &.skin-dark { background: #1e1e1e; color: #fff; button { background: #444; color: #fff; } }
+  &.skin-neon { background: #000; color: #00ffcc; button { background: #00ffcc; color: #000; font-weight: bold; } }
+}
+.click-btn {
+  padding: 30px 50px; font-size: 20px; cursor: pointer; border: none; border-radius: 10px; background: #007bff; color: white;
+  &:active { transform: scale(0.95); }
+}
+.alert-danger { background: #ffcccc; color: #cc0000; padding: 10px; margin: 10px 0; border-radius: 5px; font-weight: bold; }
