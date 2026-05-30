@@ -51,8 +51,8 @@ export default function App() {
   });
 
   return (
-    <div style={{ maxWidth: "450px", margin: "40px auto", padding: "20px", border: "1px solid #ddd", borderRadius: "8px", fontFamily: "sans-serif" }}>
-      <h1>Практична No9: ToDo List</h1>
+    <div style={{ maxWidth: "480px", margin: "50px auto", padding: "30px", border: "1px solid #ddd", borderRadius: "8px", fontFamily: "sans-serif" }}>
+      <h2>Практична No9: ToDo List</h2>
       
       <div style={{ marginBottom: "20px" }}>
         <input
@@ -61,7 +61,7 @@ export default function App() {
           placeholder="Що потрібно зробити?"
           style={{ padding: "8px", width: "70%" }}
         />
-        <button onClick={addTask} style={{ padding: "8px 15px", marginLeft: "5px", backgroundColor: "#646cff", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" }}>
+        <button onClick={addTask} style={{ padding: "4px 20px", marginLeft: "5px", backgroundColor: "#646cff", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" }}>
           Додати
         </button>
       </div>

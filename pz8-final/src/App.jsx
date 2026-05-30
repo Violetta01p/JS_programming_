@@ -13,6 +13,7 @@ function App() {
             key={item.id} 
             name={item.name} 
             price={item.price} 
+            avaliably={item.avaliably}
           />
         ))}
       </div>
